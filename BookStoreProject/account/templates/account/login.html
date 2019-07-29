@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+ <div class="breadcrumb">
+        <div class="container">
+            <a class="breadcrumb-item" href="index.html">Home</a>
+            <span class="breadcrumb-item active">Login</span>
+        </div>
+    </div>
+    <section class="static about-sec">
+        <div class="container">
+            <h1>My Account / Login</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and scrambled it to make a type specimen book. It has survived not only fiveLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem </p>
+            <div class="form">
+                <form method="post" class="login-form">
+                  {% csrf_token %}
+                  <input type="text" name="username" placeholder="Username">
+                  <input type="password" name="password" placeholder="Password">
+                  <p><button type="submit">Login</button><span>NOT REGISTERED?</span><a style="color:red;font-weight:bold;margin-left:20px;" href="{% url 'account:register' %}">REGISTER HERE</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

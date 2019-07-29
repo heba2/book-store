@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="col-md-12">
+        <div class="form" style="text-align:center;">
+            <h3 style="text-decoration:none;font-size:24px;margin:30px;font-weight:bold;color:#fd7e14;">Quick Contact us</h3>
+           <!--<h6 style="font-size:14px;margin-bottom:10px;color:inherit;"> We are now offering some good discounton selected books go and shop them</h6>-->
+            <form method="post" class="contact">
+                {% csrf_token %}
+                {{form}}
+                <!--<div class="row">
+                    <div class="col-md-6">
+                        <input placeholder="Subject" required >
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" placeholder="Email" required >
+                    </div>
+                    <div class="col-md-12">
+                        <textarea placeholder="Messege"></textarea>
+                    </div>-->
+                    <div class="col-md-12">
+                        <button class="btn black">Alright, Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
